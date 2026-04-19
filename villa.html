@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Details | Sunset Paradise Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-home"></i>
+                <span>Villa<span class="highlight">Rental</span></span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="villa.html" class="active">Villa</a>
+                <a href="owner-dashboard.html">Dashboard</a>
+                <a href="#" id="loginBtn2" class="btn-login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="villa-page">
+        <div class="container">
+            <!-- Image Gallery -->
+            <div class="gallery-section">
+                <div class="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348c1a?w=1200" alt="Villa Main" id="mainGalleryImage">
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348c1a?w=200" onclick="changeImage(this.src)" alt="Thumb 1">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=200" onclick="changeImage(this.src)" alt="Thumb 2">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200" onclick="changeImage(this.src)" alt="Thumb 3">
+                    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=200" onclick="changeImage(this.src)" alt="Thumb 4">
+                </div>
+            </div>
+
+            <div class="villa-content-grid">
+                <!-- Left Column - Villa Info -->
+                <div class="villa-info">
+                    <div class="villa-header">
+                        <h1>Sunset Paradise Villa</h1>
+                        <div class="villa-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (48 reviews)</span>
+                        </div>
+                        <p class="villa-location"><i class="fas fa-map-marker-alt"></i> North Goa, India - 500m from Candolim Beach</p>
+                    </div>
+
+                    <div class="villa-description">
+                        <h2>About This Villa</h2>
+                        <p>Experience the ultimate beachfront luxury at Sunset Paradise Villa. This stunning 4-bedroom property features a private infinity pool, spacious living areas, and breathtaking ocean views. Perfect for family gatherings, romantic getaways, or group vacations.</p>
+                        <p>The villa comes fully equipped with modern amenities including high-speed WiFi, smart TVs in every room, a fully-equipped kitchen, and daily housekeeping service. Step outside to your private terrace overlooking the Arabian Sea.</p>
+                    </div>
+
+                    <div class="villa-amenities">
+                        <h2>Amenities</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity"><i class="fas fa-swimmer"></i> Private Pool</div>
+                            <div class="amenity"><i class="fas fa-wifi"></i> Free WiFi (100 Mbps)</div>
+                            <div class="amenity"><i class="fas fa-wind"></i> Air Conditioning</div>
+                            <div class="amenity"><i class="fas fa-utensils"></i> Fully-equipped Kitchen</div>
+                            <div class="amenity"><i class="fas fa-car"></i> Free Parking (2 cars)</div>
+                            <div class="amenity"><i class="fas fa-umbrella-beach"></i> Direct Beach Access</div>
+                            <div class="amenity"><i class="fas fa-tv"></i> 4K Smart TV with Netflix</div>
+                            <div class="amenity"><i class="fas fa-fire"></i> BBQ Grill</div>
+                            <div class="amenity"><i class="fas fa-snowplow"></i> Refrigerator</div>
+                            <div class="amenity"><i class="fas fa-mug-hot"></i> Coffee Machine</div>
+                            <div class="amenity"><i class="fas fa-shower"></i> Outdoor Shower</div>
+                            <div class="amenity"><i class="fas fa-sun"></i> Sun Loungers</div>
+                        </div>
+                    </div>
+
+                    <div class="house-rules">
+                        <h2>House Rules</h2>
+                        <div class="rules-grid">
+                            <div class="rule"><i class="fas fa-clock"></i> Check-in: 2:00 PM</div>
+                            <div class="rule"><i class="fas fa-clock"></i> Check-out: 11:00 AM</div>
+                            <div class="rule"><i class="fas fa-ban"></i> No smoking inside</div>
+                            <div class="rule"><i class="fas fa-paw"></i> Pets not allowed</div>
+                            <div class="rule"><i class="fas fa-music"></i> Quiet hours: 10 PM - 8 AM</div>
+                            <div class="rule"><i class="fas fa-users"></i> Max 8 guests</div>
+                        </div>
+                    </div>
+
+                    <div class="cancellation-policy">
+                        <h2>Cancellation Policy</h2>
+                        <p><i class="fas fa-calendar-week"></i> Free cancellation up to 7 days before check-in. 50% refund for cancellations within 7 days.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column - Booking Widget -->
+                <div class="booking-widget">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <span class="price">₹12,000 <span>/ night</span></span>
+                            <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+
+                        <div class="date-picker">
+                            <label><i class="fas fa-calendar"></i> Check-in</label>
+                            <input type="text" id="checkIn" placeholder="Select date" class="date-input">
+                        </div>
+                        <div class="date-picker">
+                            <label><i class="fas fa-calendar"></i> Check-out</label>
+                            <input type="text" id="checkOut" placeholder="Select date" class="date-input">
+                        </div>
+
+                        <div class="guest-selector">
+                            <label><i class="fas fa-users"></i> Guests</label>
+                            <div class="guest-control">
+                                <button class="guest-btn" onclick="changeGuests(-1)">-</button>
+                                <span id="guestCount">2</span>
+                                <button class="guest-btn" onclick="changeGuests(1)">+</button>
+                            </div>
+                            <small>Max 8 guests</small>
+                        </div>
+
+                        <div class="price-breakdown" id="priceBreakdown">
+                            <div class="price-row">
+                                <span>₹12,000 x <span id="nightsCount">3</span> nights</span>
+                                <span>₹<span id="subtotal">36,000</span></span>
+                            </div>
+                            <div class="price-row">
+                                <span>Cleaning fee</span>
+                                <span>₹<span id="cleaningFee">3,500</span></span>
+                            </div>
+                            <div class="price-row total">
+                                <span>Total</span>
+                                <span>₹<span id="totalPrice">39,500</span></span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" onclick="openBookingModal()">
+                            <i class="fas fa-credit-card"></i> Book Now
+                        </button>
+                        <p class="payment-note"><i class="fas fa-shield-alt"></i> Secure payment via Razorpay (UPI/Cards/Netbanking)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Your Booking</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="form-group">
+                    <label>Special Requests (Optional)</label>
+                    <textarea rows="3" placeholder="Any special requirements?"></textarea>
+                </div>
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <p>📅 <span id="modalDates"></span></p>
+                    <p>👥 <span id="modalGuests"></span> guests</p>
+                    <p>💰 Total: ₹<span id="modalTotal"></span></p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Proceed to Payment →</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 VillaRental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
