@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/villa", "destination": "/villa.html" },
-    { "source": "/dashboard", "destination": "/owner-dashboard.html" },
-    { "source": "/(.*)", "destination": "/$1" }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
-}
